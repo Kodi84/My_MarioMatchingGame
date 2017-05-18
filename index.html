@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+    <title>Guessing Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href="https://code.jquery.com/jquery-2.1.4.min.js">
+    <link href="http://learning-fuze.github.io/memory_match/v0.1/script.js">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <script src="script.js">
+    </script>
+</head>
+<body>
+<div class="header text-center">
+    <h1><span>Mario Matching Game</span></h1>
+</div>
+<div>
+    <div class="col-xs-2"  id="stats_container">
+        <h1 class="text-center">STATS</h1>
+
+        <div class="matching">
+            <h5 class="col-xs-8 matching_count ">Matches</h5>
+            <h5 class="col-xs-4 value panel text-center">0</h5>
+        </div>
+        <div class="games-played">
+            <h5 class="col-xs-8">Game Play</h5>
+            <h5 class="col-xs-4 value panel text-center">0</h5>
+        </div>
+        <div class="attempts">
+            <h5 class="col-xs-8">Attempted</h5>
+            <h5 class="col-xs-4 value panel text-center">0</h5>
+        </div>
+        <div class="accuracy">
+            <h5 class="col-xs-8">Accuracy</h5>
+            <h5 class="col-xs-4 value panel text-center">0</h5>
+        </div>
+        <button class="reset col-xs-12 btn btn-default" >Reset Game
+        </button>
+        <div class="text-center game_info col-xs-12">
+            <p>
+                The object of the game is to collect the most matching pairs.
+            </p>
+            <p>
+                The game requires observation, concentration and a good memory to win.
+            </p>
+        </div>
+    </div>
+    <div class="col-xs-8" id="game_area">
+        <div class="col-xs-2 card">
+            <div  class="front">
+                <img src="images/font-car1.jpg">
+            </div>
+            <div class="back pair1">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-car1.jpg">
+            </div>
+            <div class="back pair1">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-image2.png">
+            </div>
+            <div class="back pair2">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-image2.png">
+            </div>
+            <div class="back pair2">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-image3.png">
+            </div>
+            <div class="back pair3">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-image3.png">
+            </div>
+            <div class="back pair3">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-image4.png">
+            </div>
+            <div class="back pair4">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-image4.png">
+            </div>
+            <div class="back pair4">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-image5.png">
+            </div>
+            <div class="back pair5">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-image5.png">
+            </div>
+            <div class="back pair5">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-image6.png">
+            </div>
+            <div class="back pair6">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-image6.png">
+            </div>
+            <div class="back pair6">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-image7.png">
+            </div>
+            <div class="back pair7">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-image7.png">
+            </div>
+            <div class="back pair7">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-image8.png">
+            </div>
+            <div class="back pair8">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-image8.png">
+            </div>
+            <div class="back pair8">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-image9.png">
+            </div>
+            <div class="back pair9">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+        <div class="col-xs-2 card">
+            <div class="front">
+                <img src="images/font-image9.png">
+            </div>
+            <div class="back pair9">
+                <img src="images/mario-cards-back.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-2 col-sm-2 text-center right_sideBar" >
+        <h4 class="rainbow">CLICK ME FOR MAGIC</h4>
+        <img src="images/starman_mario.png" class="img-responsive mushroom">
+    </div>
+</div>
+</body>
+</html>
